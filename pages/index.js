@@ -65,20 +65,26 @@ export default function Home() {
   ];
 
   const experiences = [
-    {
-      title: 'IT Officer Intern',
-      company: 'Guba Lafto Consulting Architects and Engineers PLC',
-      date: 'July 2023 - Sept 2023',
-      description: 'Worked on Troubleshooting Hadwares, Softwares, Installing IP cameras and Computer Networks.',
-    },
-    {
-      title: 'Web Development Project - Django',
-      company: 'Yenetta Code',
-      date: 'Oct 2023 - Nov 2023',
-      description: 'Built a website, focusing on responsive design and user experience.',
-    },
-    
-  ];
+  {
+    title: 'IT Officer Intern',
+    company: 'Guba Lafto Consulting Architects and Engineers PLC',
+    date: 'July 2023 - Sept 2023',
+    description: 'Worked on troubleshooting hardware and software issues, installing IP cameras, and setting up computer networks.',
+  },
+  {
+    title: 'Web Development Project - Django',
+    company: 'Yenetta Code',
+    date: 'Oct 2023 - Nov 2023',
+    description: 'Built a website using Django, focusing on responsive design and user experience.',
+  },
+  {
+    title: 'Full-Stack Software Developer',
+    company: 'RE Technology Solutions PLC',
+    date: 'Feb 2025 - Present',
+    description: 'Developing and maintaining web applications using Laravel and modern frontend technologies.',
+  }
+];
+
 
   return (
     <Layout>
