@@ -62,6 +62,11 @@ export default function Home() {
       image: '/p9.jpg',
       github: 'https://github.com/sirawtadesse/mypersonalwebsite',
     },
+    {
+      title: 'Integrated business management system - Laravel',
+      image: '/p9.jpg',
+      github: 'https://github.com/sirawtadesse/busines-management',
+    },
   ];
 
   const experiences = [
@@ -123,8 +128,13 @@ export default function Home() {
   <div className="md:w-1/2 md:ml-10">
     <h2 className="text-3xl mb-4">About Me</h2>
     <p className="text-lg mb-4">
-      Hi! I am Siraw Tadesse, an information systems graduate from Addis Ababa University. I have a passion for technology and a strong desire to create innovative solutions. 
-      I enjoy working on projects that challenge my skills and allow me to grow both personally and professionally.
+     Hi! I’m Siraw Tadesse, a passionate full stack software developer and information systems graduate from Addis Ababa University. With a strong foundation in both front-end and back-end technologies, I thrive on creating dynamic and user-friendly applications that solve real-world problems.
+
+I have a deep enthusiasm for technology and a relentless desire to innovate. My journey in software development has equipped me with a diverse skill set, enabling me to design and implement robust solutions across various platforms. I enjoy tackling challenging projects that push my boundaries and foster my growth both personally and professionally.
+
+From developing intuitive user interfaces to building efficient server-side logic, I am committed to delivering high-quality results. I am always eager to learn new technologies and techniques, ensuring that I stay at the forefront of the ever-evolving tech landscape.
+
+Let’s connect and explore how we can create something amazing together!
     </p>
     <a
       href="/Siraw_CV_19.pdf" // Add your CV file path here
