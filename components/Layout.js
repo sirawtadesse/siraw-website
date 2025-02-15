@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import React, { useState, useEffect } from 'react';
 import { FaSun, FaMoon, FaBars, FaTimes, FaGithub, FaLinkedin } from 'react-icons/fa'; // Added icons
+import { FaTelegram, FaFacebook } from 'react-icons/fa';
 
 const Layout = ({ children }) => {
   const [darkMode, setDarkMode] = useState(false);
