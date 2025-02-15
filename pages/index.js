@@ -109,7 +109,7 @@ export default function Home() {
         </div>
         <div className="md:w-1/2 md:ml-10">
           <h2 className="text-3xl mb-4">About Me</h2>
-          <p className="text-lg mb-4">Hi! I’m Siraw Tadesse, a passionate full stack software developer...</p>
+          <p className="text-lg mb-4">Hi! I’m Siraw Tadesse, a passionate full stack software developer and information systems graduate from Addis Ababa University. With a strong foundation in both front-end and back-end technologies, I thrive on creating dynamic and user-friendly applications that solve real-world problems.</p>
           <a href="/Siraw_CV_19.pdf" download className="inline-block bg-blue-600 text-white py-2 px-4 rounded transition hover:bg-blue-700">
             Download My CV
           </a>
