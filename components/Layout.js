@@ -1,7 +1,6 @@
-import Link from 'next/link';
 import React, { useState, useEffect } from 'react';
-import { FaSun, FaMoon, FaBars, FaTimes, FaGithub, FaLinkedin } from 'react-icons/fa'; // Added icons
-import { FaTelegram, FaFacebook } from 'react-icons/fa';
+import Link from 'next/link';
+import { FaSun, FaMoon, FaBars, FaTimes, FaGithub, FaLinkedin, FaTelegram, FaFacebook } from 'react-icons/fa';
 
 const Layout = ({ children }) => {
   const [darkMode, setDarkMode] = useState(false);
@@ -20,7 +19,7 @@ const Layout = ({ children }) => {
   };
 
   return (
-    <div className={`min-h-screen bg-white dark:bg-gray-900 transition duration-500`}>
+    <div className="min-h-screen bg-white dark:bg-gray-900 transition duration-500">
       <header className="fixed top-0 w-full z-50 p-5 bg-gray-800 text-white shadow-lg">
         <nav className="flex justify-between items-center">
           <div className="text-2xl font-bold">My Portfolio</div>
@@ -55,38 +54,38 @@ const Layout = ({ children }) => {
       <main className="pt-20">{children}</main>
 
       <footer className="p-5 bg-gray-800 text-white">
-  <div className="container mx-auto flex flex-col items-center space-y-4">
-    <div className="flex space-x-4">
-      <div className="flex items-center">
-        <a href="http://www.github.com/sirawtadesse/" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
-          <FaGithub size={24} />
-        </a>
-        <span className="ml-2">GitHub</span>
-      </div>
-      <div className="flex items-center">
-        <a href="http://www.linkedin.com/in/siraw-tadesse-668088274" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
-          <FaLinkedin size={24} />
-        </a>
-        <span className="ml-2">LinkedIn</span>
-      </div>
-      <div className="flex items-center">
-        <a href="@Siraw_bizu" target="_blank" rel="noopener noreferrer" aria-label="Telegram">
-          <FaTelegram size={24} />
-        </a>
-        <span className="ml-2">Telegram</span>
-      </div>
-      <div className="flex items-center">
-        <a href="https://web.facebook.com/good.goldta/" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
-          <FaFacebook size={24} />
-        </a>
-        <span className="ml-2">Facebook</span>
-      </div>
-    </div>
-    <div className="text-md text-center">
-      © {new Date().getFullYear()} Siraw Tadesse. All Rights Reserved.
-    </div>
-  </div>
-</footer>
+        <div className="container mx-auto flex flex-col items-center space-y-4">
+          <div className="flex space-x-4">
+            <div className="flex items-center">
+              <a href="http://www.github.com/sirawtadesse/" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+                <FaGithub size={24} />
+              </a>
+              <span className="ml-2">GitHub</span>
+            </div>
+            <div className="flex items-center">
+              <a href="http://www.linkedin.com/in/sirawtadesse-668088274" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                <FaLinkedin size={24} />
+              </a>
+              <span className="ml-2">LinkedIn</span>
+            </div>
+            <div className="flex items-center">
+              <a href="https://t.me/yourtelegramusername" target="_blank" rel="noopener noreferrer" aria-label="Telegram">
+                <FaTelegram size={24} />
+              </a>
+              <span className="ml-2">Telegram</span>
+            </div>
+            <div className="flex items-center">
+              <a href="https://www.facebook.com/yourfacebookusername" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+                <FaFacebook size={24} />
+              </a>
+              <span className="ml-2">Facebook</span>
+            </div>
+          </div>
+          <div className="text-md text-center">
+            © {new Date().getFullYear()} Siraw Tadesse. All Rights Reserved.
+          </div>
+        </div>
+      </footer>
     </div>
   );
 };
