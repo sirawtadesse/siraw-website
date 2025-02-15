@@ -69,13 +69,13 @@ const Layout = ({ children }) => {
               <span className="ml-2">LinkedIn</span>
             </div>
             <div className="flex items-center">
-              <a href="https://t.me/yourtelegramusername" target="_blank" rel="noopener noreferrer" aria-label="Telegram">
+              <a href="https://t.me/Siraw_bizu" target="_blank" rel="noopener noreferrer" aria-label="Telegram">
                 <FaTelegram size={24} />
               </a>
               <span className="ml-2">Telegram</span>
             </div>
             <div className="flex items-center">
-              <a href="https://www.facebook.com/yourfacebookusername" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+              <a href="https://web.facebook.com/good.goldta" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
                 <FaFacebook size={24} />
               </a>
               <span className="ml-2">Facebook</span>
