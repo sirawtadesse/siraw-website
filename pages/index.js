@@ -80,7 +80,7 @@ export default function Home() {
   {
     title: 'Full-Stack Software Developer',
     company: 'RE Technology Solutions PLC',
-    date: 'Feb 2025 - Present',
+    date: 'Nov 2024 - Present',
     description: 'Developing and maintaining web applications using Laravel and modern frontend technologies.',
   }
 ];
