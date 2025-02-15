@@ -54,20 +54,38 @@ const Layout = ({ children }) => {
       <main className="pt-20">{children}</main>
 
       <footer className="p-5 bg-gray-800 text-white">
-        <div className="container mx-auto flex flex-col items-center space-y-4">
-          <div className="flex space-x-4">
-            <a href="http://www.github.com/sirawtadesse/" target="_blank" rel="noopener noreferrer">
-              <FaGithub size={24} />
-            </a>
-            <a href="http://www.linkedin.com/in/siraw-tadesse-668088274" target="_blank" rel="noopener noreferrer">
-              <FaLinkedin size={24} />
-            </a>
-          </div>
-          <div className="text-md text-center">
-            © {new Date().getFullYear()} Siraw Tadesse. All Rights Reserved.
-          </div>
-        </div>
-      </footer>
+  <div className="container mx-auto flex flex-col items-center space-y-4">
+    <div className="flex space-x-4">
+      <div className="flex items-center">
+        <a href="http://www.github.com/sirawtadesse/" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+          <FaGithub size={24} />
+        </a>
+        <span className="ml-2">GitHub</span>
+      </div>
+      <div className="flex items-center">
+        <a href="http://www.linkedin.com/in/siraw-tadesse-668088274" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+          <FaLinkedin size={24} />
+        </a>
+        <span className="ml-2">LinkedIn</span>
+      </div>
+      <div className="flex items-center">
+        <a href="@Siraw_bizu" target="_blank" rel="noopener noreferrer" aria-label="Telegram">
+          <FaTelegram size={24} />
+        </a>
+        <span className="ml-2">Telegram</span>
+      </div>
+      <div className="flex items-center">
+        <a href="https://web.facebook.com/good.goldta/" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+          <FaFacebook size={24} />
+        </a>
+        <span className="ml-2">Facebook</span>
+      </div>
+    </div>
+    <div className="text-md text-center">
+      © {new Date().getFullYear()} Siraw Tadesse. All Rights Reserved.
+    </div>
+  </div>
+</footer>
     </div>
   );
 };
