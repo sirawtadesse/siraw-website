@@ -103,17 +103,11 @@ export default function Home() {
   
   <div className="flex flex-col items-center justify-center h-full bg-black bg-opacity-50 p-4">
     <h1 className="text-3xl md:text-4xl text-white text-center mb-2">Welcome to My Portfolio</h1>
-    <p className="text-lg md:text-2xl text-white text-center">I am Siraw Tadesse</p>
+    <p className="text-lg md:text-2xl text-white text-center">I am Siraw Tadesse, Full - Satck Software Developer</p>
   </div>
 
   {/* Information Section */}
-  <div className="absolute bottom-10 right-4 transform translate-y-0 bg-white bg-opacity-80 p-6 rounded-lg shadow-lg w-11/12 md:w-96">
-    <h2 className="text-xl md:text-2xl font-bold text-center mb-4">Contact Me</h2>
-    <p className="text-base md:text-lg text-gray-700">Email: sirawbizutadesse21@gmail.com</p>
-    <p className="text-base md:text-lg text-gray-700">Or: daveyetadulij@gmail.com</p>
-    <p className="text-base md:text-lg text-gray-700">Phone: (+251) 919-901362</p>
-    <p className="text-base md:text-lg text-gray-700">Address: Addis Ababa, Ethiopia</p>
-  </div>
+ 
 </section>
 
       
@@ -226,53 +220,67 @@ export default function Home() {
       </section>
 
 
-      <section id="contact" className="p-10 bg-gray-100">
-        <h2 className="text-3xl text-center mb-6">Get In Touch</h2>
-        <div className="flex justify-center">
-          <form className="bg-white shadow-md rounded-lg p-6 w-full max-w-lg">
-            <div className="mb-4">
-              <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="name">
-                Name
-              </label>
-              <input
-                type="text"
-                id="name"
-                placeholder="Your Name"
-                className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-                required
-              />
-            </div>
-            <div className="mb-4">
-              <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="email">
-                Email
-              </label>
-              <input
-                type="email"
-                id="email"
-                placeholder="Your Email"
-                className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-                required
-              />
-            </div>
-            <div className="mb-4">
-              <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="message">
-                Message
-              </label>
-              <textarea
-                id="message"
-                rows="4"
-                placeholder="Your Message"
-                className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-                required
-              ></textarea>
-            </div>
-            <div className="flex items-center justify-between">
-              <button
-                type="submit"
-                className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
-              >
-                Send
-              </button>
+     <section id="contact" className="p-10 bg-gray-100">
+  <h2 className="text-3xl text-center mb-6">Get In Touch</h2>
+  <div className="flex flex-col md:flex-row justify-center items-start space-x-10">
+    {/* Contact Form */}
+    <form className="bg-white shadow-md rounded-lg p-6 w-full max-w-lg">
+      <div className="mb-4">
+        <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="name">
+          Name
+        </label>
+        <input
+          type="text"
+          id="name"
+          placeholder="Your Name"
+          className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+          required
+        />
+      </div>
+      <div className="mb-4">
+        <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="email">
+          Email
+        </label>
+        <input
+          type="email"
+          id="email"
+          placeholder="Your Email"
+          className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+          required
+        />
+      </div>
+      <div className="mb-4">
+        <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="message">
+          Message
+        </label>
+        <textarea
+          id="message"
+          rows="4"
+          placeholder="Your Message"
+          className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+          required
+        ></textarea>
+      </div>
+      <div className="flex items-center justify-between">
+        <button
+          type="submit"
+          className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+        >
+          Send Me
+        </button>
+      </div>
+    </form>
+
+    {/* Contact Information */}
+    <div className="bg-white bg-opacity-80 p-6 rounded-lg shadow-lg w-full max-w-md mt-6 md:mt-0">
+      <h2 className="text-xl md:text-2xl font-bold text-center mb-4">Contact Me</h2>
+      <p className="text-base md:text-lg text-gray-700">Email: sirawbizutadesse21@gmail.com</p>
+      <p className="text-base md:text-lg text-gray-700">Or: daveyetadulij@gmail.com</p>
+      <p className="text-base md:text-lg text-gray-700">Phone: (+251) 919-901362</p>
+      <p className="text-base md:text-lg text-gray-700">Address: Addis Ababa, Ethiopia</p>
+    </div>
+  </div>
+</section>
             </div>
           </form>
         </div>
