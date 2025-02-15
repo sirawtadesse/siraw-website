@@ -111,7 +111,7 @@ export default function Home() {
     <p className="text-lg md:text-2xl text-white text-center">I am Siraw Tadesse, Full - Satck Software Developer</p>
   </div>
 
-  {/* Information Section */}
+ 
  
 </section>
 
@@ -215,7 +215,7 @@ Let’s connect and explore how we can create something amazing together!
             <h3 className="text-xl font-bold">Mysql</h3>
           </div>
           <div className="bg-white shadow-md rounded-lg p-5 w-32 mb-4">
-            <h3 className="text-xl font-bold">Data analysis</h3>
+            <h3 className="text-xl font-bold">Data analysis - Python</h3>
           </div>
           <div className="bg-white shadow-md rounded-lg p-5 w-32 mb-4">
             <h3 className="text-xl font-bold">Computer Network Config.</h3>
@@ -224,7 +224,7 @@ Let’s connect and explore how we can create something amazing together!
             <h3 className="text-xl font-bold">IP Camera Installation</h3>
           </div>
           <div className="bg-white shadow-md rounded-lg p-5 w-34 mb-4">
-            <h3 className="text-xl font-bold">Bot development</h3>
+            <h3 className="text-xl font-bold">Telegram Bot development</h3>
           </div>
         </div>
       </section>
