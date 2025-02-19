@@ -115,7 +115,7 @@ const Layout = ({ children }) => {
             </div>
             <div className="flex items-center">
               <a
-                href="@Siraw_bizu"
+                href="https://t.me/siraw_bizu1"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Telegram"
