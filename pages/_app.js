@@ -6,7 +6,7 @@ export default function App({ Component, pageProps }) {
     <>
       <Head>
         {/* Primary Meta Tags */}
-        <title>Siraw Tadesse | Full-Stack Developer Portfolio</title>
+        <title>Full-Stack Developer Portfolio | Siraw Tadesse</title>
         <meta
           name="description"
           content="Portfolio of Siraw Tadesse, a full-stack developer from Addis Ababa University. Explore projects, experience, and skills."
