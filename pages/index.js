@@ -57,11 +57,11 @@ export default function Home() {
       image: '/p9.jpg',
       github: 'https://github.com/sirawtadesse/mypersonalwebsite',
     },
-    {
-      title: 'Integrated business management system - Laravel',
-      image: '/p10.jpg',
-      github: 'https://github.com/sirawtadesse/business-management',
-    },
+    // {
+    //   title: 'Integrated business management system - Laravel',
+    //   image: '/p10.jpg',
+    //   github: 'https://github.com/sirawtadesse/business-management',
+    // },
   ];
 
   const experiences = [
