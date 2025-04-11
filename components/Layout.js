@@ -26,7 +26,7 @@ const Layout = ({ children }) => {
     }
   }, []);
 
-  // Whenever darkMode changes update document and localStorage
+  // Update root element and localStorage on dark mode change
   useEffect(() => {
     if (darkMode) {
       document.documentElement.classList.add('dark');
@@ -37,124 +37,90 @@ const Layout = ({ children }) => {
     }
   }, [darkMode]);
 
-  const toggleMenu = () => {
-    setIsMenuOpen(!isMenuOpen);
-  };
+  const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
 
   return (
-    <div className="min-h-screen bg-white dark:bg-gray-900 transition duration-500">
-      <header className="fixed top-0 w-full z-50 p-5 bg-gray-800 text-white shadow-lg">
+    <div className="min-h-screen bg-white dark:bg-gray-900 transition-colors duration-500">
+      <header className="fixed top-0 w-full z-50 p-5 bg-gray-800 dark:bg-gray-700 text-white shadow-lg">
         <nav className="flex justify-between items-center">
-          <div className="text-2xl font-bold">My Portfolio</div>
+          <div className="text-2xl font-bold hover:scale-105 transition-transform duration-300 cursor-pointer">
+            My Portfolio
+          </div>
           <div className="flex items-center space-x-4">
             {/* Hamburger Menu for Mobile */}
             <div className="md:hidden">
-              <button onClick={toggleMenu} className="text-white">
+              <button onClick={toggleMenu} className="text-white focus:outline-none">
                 {isMenuOpen ? <FaTimes size={24} /> : <FaBars size={24} />}
               </button>
             </div>
 
             {/* Navbar Links */}
             <ul
-              className={`fixed inset-0 bg-gray-800 bg-opacity-90 p-10 space-y-6 transform 
+              className={`fixed inset-0 bg-gray-800 dark:bg-gray-700 bg-opacity-95 p-10 space-y-6 transform 
               ${isMenuOpen ? 'translate-x-0' : 'translate-x-full'} transition-transform duration-500 
               md:relative md:translate-x-0 md:flex md:space-x-4 md:space-y-0 md:bg-transparent md:p-0`}
             >
-              <li>
-                <Link href="#home" onClick={toggleMenu} className="block md:inline">
-                  Home
-                </Link>
-              </li>
-              <li>
-                <Link href="#about" onClick={toggleMenu} className="block md:inline">
-                  About
-                </Link>
-              </li>
-              <li>
-                <Link href="#projects" onClick={toggleMenu} className="block md:inline">
-                  Projects
-                </Link>
-              </li>
-              <li>
-                <Link href="#experience" onClick={toggleMenu} className="block md:inline">
-                  Experience
-                </Link>
-              </li>
-              <li>
-                <Link href="#education" onClick={toggleMenu} className="block md:inline">
-                  Education
-                </Link>
-              </li>
-              <li>
-                <Link href="#skills" onClick={toggleMenu} className="block md:inline">
-                  Skills
-                </Link>
-              </li>
-              <li>
-                <Link href="#contact" onClick={toggleMenu} className="block md:inline">
-                  Contact
-                </Link>
-              </li>
+              {['home', 'about', 'projects', 'experience', 'education', 'skills', 'contact'].map((section) => (
+                <li key={section}>
+                  <Link href={`#${section}`}>
+                    <a
+                      onClick={() => setIsMenuOpen(false)}
+                      className="block text-lg hover:text-blue-400 hover:scale-105 transition-transform duration-300 cursor-pointer"
+                    >
+                      {section.charAt(0).toUpperCase() + section.slice(1)}
+                    </a>
+                  </Link>
+                </li>
+              ))}
             </ul>
 
             {/* Dark Mode Toggle */}
-            <button onClick={() => setDarkMode(!darkMode)} className="text-white p-2">
-              {darkMode ? <FaSun size={24} /> : <FaMoon size={24} />}
+            <button
+              onClick={() => setDarkMode(!darkMode)}
+              className="bg-gray-700 dark:bg-gray-600 p-2 rounded-full focus:outline-none transition-all duration-300 hover:scale-105 cursor-pointer"
+              aria-label="Toggle Dark Mode"
+            >
+              {darkMode ? <FaSun size={24} className="text-yellow-400" /> : <FaMoon size={24} className="text-blue-300" />}
             </button>
           </div>
         </nav>
       </header>
 
-      {/* Add top padding so content doesn't overlap with fixed navbar */}
+      {/* Content */}
       <main className="pt-20">{children}</main>
 
-      <footer className="p-5 bg-gray-800 text-white">
+      <footer className="p-5 bg-gray-800 dark:bg-gray-700 text-white">
         <div className="container mx-auto flex flex-col items-center space-y-4">
           <div className="flex flex-wrap justify-center items-center gap-4">
-            <div className="flex items-center">
-              <a
-                href="http://www.github.com/sirawtadesse/"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="GitHub"
-              >
-                <FaGithub size={24} />
-              </a>
-              <span className="ml-2">GitHub</span>
-            </div>
-            <div className="flex items-center">
-              <a
-                href="http://www.linkedin.com/in/sirawtadesse-668088274"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="LinkedIn"
-              >
-                <FaLinkedin size={24} />
-              </a>
-              <span className="ml-2">LinkedIn</span>
-            </div>
-            <div className="flex items-center">
-              <a
-                href="https://t.me/siraw_bizu1"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="Telegram"
-              >
-                <FaTelegram size={24} />
-              </a>
-              <span className="ml-2">Telegram</span>
-            </div>
-            <div className="flex items-center">
-              <a
-                href="https://web.facebook.com/good.goldta"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="Facebook"
-              >
-                <FaFacebook size={24} />
-              </a>
-              <span className="ml-2">Facebook</span>
-            </div>
+            {[
+              {
+                href: "http://www.github.com/sirawtadesse/",
+                icon: <FaGithub size={24} />,
+                label: "GitHub",
+              },
+              {
+                href: "http://www.linkedin.com/in/sirawtadesse-668088274",
+                icon: <FaLinkedin size={24} />,
+                label: "LinkedIn",
+              },
+              {
+                href: "https://t.me/siraw_bizu1",
+                icon: <FaTelegram size={24} />,
+                label: "Telegram",
+              },
+              {
+                href: "https://web.facebook.com/good.goldta",
+                icon: <FaFacebook size={24} />,
+                label: "Facebook",
+              },
+            ].map((social, i) => (
+              <div key={i} className="flex items-center hover:text-blue-400 transition-colors cursor-pointer">
+                <a href={social.href} target="_blank" rel="noopener noreferrer" aria-label={social.label}>
+                  {social.icon}
+                </a>
+                <span className="ml-2">{social.label}</span>
+              </div>
+            ))}
           </div>
           <div className="text-md text-center">
             © {new Date().getFullYear()} Siraw Tadesse. All Rights Reserved.
