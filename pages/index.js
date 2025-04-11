@@ -11,6 +11,11 @@ export default function Home() {
     return () => clearTimeout(timer);
   }, []);
 
+  // Define a CSS class string based on visibility to animate fade in
+  const fadeClass = isVisible
+    ? "opacity-100 transition-opacity duration-1000"
+    : "opacity-0";
+
   const projects = [
     {
       title: 'Product Management System - Django',
@@ -57,6 +62,7 @@ export default function Home() {
       image: '/p9.jpg',
       github: 'https://github.com/sirawtadesse/mypersonalwebsite',
     },
+    // Uncomment and add more if needed
     // {
     //   title: 'Integrated business management system - Laravel',
     //   image: '/p10.jpg',
@@ -69,19 +75,22 @@ export default function Home() {
       title: 'IT Officer Intern',
       company: 'Guba Lafto Consulting Architects and Engineers PLC',
       date: 'July 2023 - Sept 2023',
-      description: 'Worked on troubleshooting hardware and software issues, installing IP cameras, and setting up computer networks.',
+      description:
+        'Worked on troubleshooting hardware and software issues, installing IP cameras, and setting up computer networks.',
     },
     {
       title: 'Web Development Project - Django',
       company: 'Yenetta Code',
       date: 'Oct 2023 - Nov 2023',
-      description: 'Built a website using Django, focusing on responsive design and user experience.',
+      description:
+        'Built a website using Django, focusing on responsive design and user experience.',
     },
     {
       title: 'Full-Stack Software Developer',
       company: 'RE Technology Solutions PLC',
       date: 'Nov 2024 - Present',
-      description: 'Developing and maintaining web applications using Laravel and modern frontend technologies.',
+      description:
+        'Developing and maintaining web applications using Laravel and modern frontend technologies.',
     },
   ];
 
@@ -90,7 +99,7 @@ export default function Home() {
       {/* Home Section */}
       <section
         id="home"
-        className="hero h-screen md:h-96 bg-cover bg-center relative"
+        className={`hero h-screen md:h-96 bg-cover bg-center relative ${fadeClass}`}
         style={{ backgroundImage: "url('/sis.jpg')" }}
       >
         <div className="absolute top-20 left-4">
@@ -111,7 +120,10 @@ export default function Home() {
       </section>
 
       {/* About Section */}
-      <section id="about" className="flex flex-col md:flex-row p-6 md:p-10 items-center">
+      <section
+        id="about"
+        className={`flex flex-col md:flex-row p-6 md:p-10 items-center ${fadeClass}`}
+      >
         <div className="w-full md:w-1/3 mb-6 md:mb-0">
           <img
             src="/srw.jpg"
@@ -122,7 +134,10 @@ export default function Home() {
         <div className="w-full md:w-2/3 md:pl-10">
           <h2 className="text-3xl mb-4">About Me</h2>
           <p className="text-lg mb-4">
-            Hi! I’m Siraw Tadesse, a passionate full stack software developer and information systems graduate from Addis Ababa University. I thrive on creating dynamic, user-friendly applications that solve real-world problems.
+            Hi! I’m Siraw Tadesse, a passionate full stack software developer
+            and information systems graduate from Addis Ababa University. I
+            thrive on creating dynamic, user-friendly applications that solve
+            real-world problems.
           </p>
           <a
             href="/Siraw_CV_19.pdf"
@@ -135,7 +150,7 @@ export default function Home() {
       </section>
 
       {/* Projects Section */}
-      <section id="projects" className="p-6 md:p-10">
+      <section id="projects" className={`p-6 md:p-10 ${fadeClass}`}>
         <h2 className="text-3xl text-center mb-4">My Projects</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
           {projects.map((project, index) => (
@@ -160,7 +175,7 @@ export default function Home() {
       </section>
 
       {/* Experience Section */}
-      <section id="experience" className="p-6 md:p-10 bg-gray-100">
+      <section id="experience" className={`p-6 md:p-10 bg-gray-100 ${fadeClass}`}>
         <h2 className="text-3xl text-center mb-6">My Experience</h2>
         <div className="flex flex-col md:flex-row gap-6 justify-center">
           {experiences.map((exp, index) => (
@@ -178,7 +193,7 @@ export default function Home() {
       </section>
 
       {/* Education Section */}
-      <section id="education" className="p-6 md:p-10 bg-gray-100">
+      <section id="education" className={`p-6 md:p-10 bg-gray-100 ${fadeClass}`}>
         <h2 className="text-3xl text-center mb-6">My Education</h2>
         <div className="flex flex-wrap justify-center gap-4">
           <div className="bg-white shadow-md rounded-lg p-5 w-full max-w-sm">
@@ -192,7 +207,7 @@ export default function Home() {
       </section>
 
       {/* Skills Section */}
-      <section id="skills" className="p-6 md:p-10 bg-gray-200">
+      <section id="skills" className={`p-6 md:p-10 bg-gray-200 ${fadeClass}`}>
         <h2 className="text-3xl text-center mb-6">Skills</h2>
         <div className="flex flex-wrap justify-center gap-4">
           {[
@@ -206,7 +221,10 @@ export default function Home() {
             'IP Camera Installation',
             'Telegram Bot development',
           ].map((skill, index) => (
-            <div key={index} className="bg-white shadow-md rounded-lg p-3 w-32 text-center">
+            <div
+              key={index}
+              className="bg-white shadow-md rounded-lg p-3 w-32 text-center"
+            >
               <h3 className="text-lg font-bold">{skill}</h3>
             </div>
           ))}
@@ -214,14 +232,14 @@ export default function Home() {
       </section>
 
       {/* Contact Section */}
-      <section id="contact" className="p-6 md:p-10 bg-gray-100">
+      <section id="contact" className={`p-6 md:p-10 bg-gray-100 ${fadeClass}`}>
         <h2 className="text-3xl text-center mb-6">Get In Touch</h2>
         <div className="flex flex-col md:flex-row gap-10 justify-center items-start">
           <form className="bg-white shadow-md rounded-lg p-6 w-full max-w-lg">
             <div className="mb-4">
               <label
-                className="block text-gray-700 text-sm font-bold mb-2"
                 htmlFor="name"
+                className="block text-gray-700 text-sm font-bold mb-2"
               >
                 Name
               </label>
@@ -235,8 +253,8 @@ export default function Home() {
             </div>
             <div className="mb-4">
               <label
-                className="block text-gray-700 text-sm font-bold mb-2"
                 htmlFor="email"
+                className="block text-gray-700 text-sm font-bold mb-2"
               >
                 Email
               </label>
@@ -250,8 +268,8 @@ export default function Home() {
             </div>
             <div className="mb-4">
               <label
-                className="block text-gray-700 text-sm font-bold mb-2"
                 htmlFor="message"
+                className="block text-gray-700 text-sm font-bold mb-2"
               >
                 Message
               </label>
@@ -272,7 +290,6 @@ export default function Home() {
               </button>
             </div>
           </form>
-
           <div className="bg-white bg-opacity-80 p-6 rounded-lg shadow-lg w-full max-w-md">
             <h2 className="text-xl md:text-2xl font-bold text-center mb-4">
               Contact Me
