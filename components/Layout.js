@@ -7,18 +7,38 @@ import {
 
 const Layout = ({ children }) => {
   const [darkMode, setDarkMode] = useState(false);
-  const [isMenuOpen, setIsMenuOpen] = useState(false); // State for mobile menu
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
+  // On mount, initialize dark mode from localStorage or system preference
+  useEffect(() => {
+    const storedTheme = localStorage.getItem('theme');
+    if (storedTheme) {
+      setDarkMode(storedTheme === 'dark');
+      if (storedTheme === 'dark') {
+        document.documentElement.classList.add('dark');
+      }
+    } else {
+      const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+      setDarkMode(prefersDark);
+      if (prefersDark) {
+        document.documentElement.classList.add('dark');
+      }
+    }
+  }, []);
+
+  // Whenever darkMode changes update document and localStorage
   useEffect(() => {
     if (darkMode) {
-      document.body.classList.add('dark');
+      document.documentElement.classList.add('dark');
+      localStorage.setItem('theme', 'dark');
     } else {
-      document.body.classList.remove('dark');
+      document.documentElement.classList.remove('dark');
+      localStorage.setItem('theme', 'light');
     }
   }, [darkMode]);
 
   const toggleMenu = () => {
-    setIsMenuOpen(!isMenuOpen); // Toggle mobile menu visibility
+    setIsMenuOpen(!isMenuOpen);
   };
 
   return (
