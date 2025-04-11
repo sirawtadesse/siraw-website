@@ -47,7 +47,7 @@ const Layout = ({ children }) => {
     <img
       src="/s10.png"
       alt="Logo"
-      className="w-24 h-24 md:w-32 md:h-32 object-cover rounded-full shadow-xl hover:scale-105 transition-transform duration-300 cursor-pointer"
+      className="w-16 h-16 md:w-32 md:h-24 object-cover rounded-full shadow-xl hover:scale-105 transition-transform duration-300 cursor-pointer"
     />
   </div>
           <div className="flex items-center space-x-4">
