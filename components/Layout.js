@@ -43,9 +43,13 @@ const Layout = ({ children }) => {
     <div className="min-h-screen bg-white dark:bg-gray-900 transition-colors duration-500">
       <header className="fixed top-0 w-full z-50 p-5 bg-gray-800 dark:bg-gray-700 text-white shadow-lg">
         <nav className="flex justify-between items-center">
-          <div className="text-2xl font-bold hover:scale-105 transition-transform duration-300 cursor-pointer">
-            My Portfolio
-          </div>
+          <div className="absolute top-20 left-4 animate-fadeInUp">
+    <img
+      src="/s10.png"
+      alt="Logo"
+      className="w-24 h-24 md:w-32 md:h-32 object-cover rounded-full shadow-xl hover:scale-105 transition-transform duration-300 cursor-pointer"
+    />
+  </div>
           <div className="flex items-center space-x-4">
             {/* Hamburger Menu for Mobile */}
             <div className="md:hidden">
