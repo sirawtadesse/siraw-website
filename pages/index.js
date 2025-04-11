@@ -93,13 +93,7 @@ export default function Home() {
   className="hero h-screen md:h-96 bg-cover dark:bg-gray-700 bg-center relative"
   style={{ backgroundImage: "url('/s1.jpeg')" }}
 >
-  // <div className="absolute top-20 left-4 animate-fadeInUp">
-  //   <img
-  //     src="/s10.png"
-  //     alt="Logo"
-  //     className="w-24 h-24 md:w-32 md:h-32 object-cover rounded-full shadow-xl hover:scale-105 transition-transform duration-300 cursor-pointer"
-  //   />
-  // </div>
+  
   <div className="flex flex-col items-center justify-center h-full bg-black bg-opacity-50 p-4 animate-fadeInUp">
     <h1 className="text-3xl md:text-4xl text-white text-center mb-2 tracking-wide hover:scale-105 transition-transform duration-300 cursor-pointer">
       Welcome to My Portfolio
