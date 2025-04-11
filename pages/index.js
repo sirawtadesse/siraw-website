@@ -177,14 +177,14 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Education Section */}
-      <section id="education" className={`p-6 md:p-10 dark:bg-gray-700 bg-gray-100 ${fadeClass}`}>
-        <h2 className="text-3xl text-center mb-6 font-semibold">My Education</h2>
+      {/* Education Section with full dark background in dark mode */}
+      <section id="education" className={`p-6 md:p-10 ${fadeClass} bg-gray-100 dark:bg-black`}>
+        <h2 className="text-3xl text-center mb-6 font-semibold text-gray-800 dark:text-gray-100">My Education</h2>
         <div className="flex flex-wrap justify-center gap-6">
-          <div className="bg-white dark:bg-gray-800 shadow-md rounded-lg p-5 w-full max-w-sm transform hover:scale-105 transition-transform duration-300 cursor-pointer">
-            <h3 className="text-xl font-bold">Bachelor of Science in Information Systems</h3>
-            <p className="text-gray-600">Addis Ababa University</p>
-            <p className="text-sm text-gray-500">Graduated: 2024</p>
+          <div className="bg-white dark:bg-gray-900 shadow-md rounded-lg p-5 w-full max-w-sm transform hover:scale-105 transition-transform duration-300 cursor-pointer">
+            <h3 className="text-xl font-bold text-gray-800 dark:text-gray-100">Bachelor of Science in Information Systems</h3>
+            <p className="text-gray-600 dark:text-gray-300">Addis Ababa University</p>
+            <p className="text-sm text-gray-500 dark:text-gray-400">Graduated: 2024</p>
           </div>
         </div>
       </section>
@@ -211,11 +211,11 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Contact Section */}
-      <section id="contact" className={`p-6 md:p-10 dark:bg-gray-700 bg-gray-100 ${fadeClass}`}>
-        <h2 className="text-3xl text-center mb-6 font-semibold">Get In Touch</h2>
+      {/* Contact Section with full dark background in dark mode */}
+      <section id="contact" className={`p-6 md:p-10 ${fadeClass} bg-gray-100 dark:bg-black`}>
+        <h2 className="text-3xl text-center mb-6 font-semibold text-gray-800 dark:text-gray-100">Get In Touch</h2>
         <div className="flex flex-col md:flex-row gap-10 justify-center items-start">
-          <form className="bg-white dark:bg-gray-800 shadow-md rounded-lg p-6 w-full max-w-lg transform hover:scale-105 transition-transform duration-300 cursor-pointer">
+          <form className="bg-white dark:bg-gray-900 shadow-md rounded-lg p-6 w-full max-w-lg transform hover:scale-105 transition-transform duration-300 cursor-pointer">
             <div className="mb-4">
               <label htmlFor="name" className="block text-gray-700 dark:text-gray-300 text-sm font-bold mb-2">
                 Name
@@ -262,8 +262,8 @@ export default function Home() {
             </div>
           </form>
 
-          <div className="bg-white dark:bg-gray-800 bg-opacity-80 p-6 rounded-lg shadow-lg w-full max-w-md transform hover:scale-105 transition-transform duration-300 cursor-pointer">
-            <h2 className="text-xl md:text-2xl font-bold text-center mb-4">Contact Me</h2>
+          <div className="bg-white dark:bg-gray-900 bg-opacity-80 p-6 rounded-lg shadow-lg w-full max-w-md transform hover:scale-105 transition-transform duration-300 cursor-pointer">
+            <h2 className="text-xl md:text-2xl font-bold text-center mb-4 text-gray-800 dark:text-gray-100">Contact Me</h2>
             <p className="text-base md:text-lg text-gray-700 dark:text-gray-300">Email: sirawbizutadesse21@gmail.com</p>
             <p className="text-base md:text-lg text-gray-700 dark:text-gray-300">Or: daveyetadulij@gmail.com</p>
             <p className="text-base md:text-lg text-gray-700 dark:text-gray-300">Phone: (+251) 919-901362</p>
