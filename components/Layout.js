@@ -41,54 +41,57 @@ const Layout = ({ children }) => {
 
   return (
     <div className="min-h-screen bg-white dark:bg-gray-900 transition-colors duration-500">
-      <header className="fixed top-0 w-full z-50 p-5 bg-gray-800 dark:bg-gray-700 text-white shadow-lg">
-        <nav className="flex justify-between items-center">
-          <div className="text-2xl font-bold hover:scale-105 transition-transform duration-300 cursor-pointer">
-    <img
-      src="/s10.png"
-      alt="Logo"
-      className="w-16 h-16 md:w-32 md:h-24 object-cover rounded-full shadow-xl hover:scale-105 transition-transform duration-300 cursor-pointer"
-    />
-  </div>
-          <div className="flex items-center space-x-4">
-            {/* Hamburger Menu for Mobile */}
-            <div className="md:hidden">
-              <button onClick={toggleMenu} className="text-white focus:outline-none">
-                {isMenuOpen ? <FaTimes size={24} /> : <FaBars size={24} />}
-              </button>
-            </div>
+      <header className="fixed top-0 w-full z-50 bg-gray-800 dark:bg-gray-700 text-white shadow-lg">
+  <nav className="flex justify-between items-center px-5 py-4">
+    {/* Logo */}
+    <div className="flex items-center">
+      <img
+        src="/s10.png"
+        alt="Logo"
+        className="w-12 h-12 md:w-16 md:h-16 object-cover rounded-full shadow-xl hover:scale-105 transition-transform duration-300 cursor-pointer"
+      />
+    </div>
 
-            {/* Navbar Links */}
-            <ul
-              className={`fixed inset-0 bg-gray-800 dark:bg-gray-700 bg-opacity-95 p-10 space-y-6 transform 
-              ${isMenuOpen ? 'translate-x-0' : 'translate-x-full'} transition-transform duration-500 
-              md:relative md:translate-x-0 md:flex md:space-x-4 md:space-y-0 md:bg-transparent md:p-0`}
-            >
-              {['home', 'about', 'projects', 'experience', 'education', 'skills', 'contact'].map((section) => (
-                <li key={section}>
-                  <Link href={`#${section}`}>
-                    <a
-                      onClick={() => setIsMenuOpen(false)}
-                      className="block text-lg hover:text-blue-400 hover:scale-105 transition-transform duration-300 cursor-pointer"
-                    >
-                      {section.charAt(0).toUpperCase() + section.slice(1)}
-                    </a>
-                  </Link>
-                </li>
-              ))}
-            </ul>
+    {/* Navigation and Dark Mode Toggle */}
+    <div className="flex items-center space-x-4">
+      {/* Hamburger Menu for Mobile */}
+      <div className="md:hidden">
+        <button onClick={toggleMenu} className="text-white focus:outline-none">
+          {isMenuOpen ? <FaTimes size={24} /> : <FaBars size={24} />}
+        </button>
+      </div>
 
-            {/* Dark Mode Toggle */}
-            <button
-              onClick={() => setDarkMode(!darkMode)}
-              className="bg-gray-700 dark:bg-gray-600 p-2 rounded-full focus:outline-none transition-all duration-300 hover:scale-105 cursor-pointer"
-              aria-label="Toggle Dark Mode"
-            >
-              {darkMode ? <FaSun size={24} className="text-yellow-400" /> : <FaMoon size={24} className="text-blue-300" />}
-            </button>
-          </div>
-        </nav>
-      </header>
+      {/* Navbar Links */}
+      <ul
+        className={`fixed inset-0 bg-gray-800 dark:bg-gray-700 bg-opacity-95 p-10 space-y-6 transform 
+        ${isMenuOpen ? 'translate-x-0' : 'translate-x-full'} transition-transform duration-500 
+        md:relative md:translate-x-0 md:flex md:space-x-4 md:space-y-0 md:bg-transparent md:p-0`}
+      >
+        {['home', 'about', 'projects', 'experience', 'education', 'skills', 'contact'].map((section) => (
+          <li key={section}>
+            <Link href={`#${section}`}>
+              <a
+                onClick={() => setIsMenuOpen(false)}
+                className="block text-lg hover:text-blue-400 hover:scale-105 transition-transform duration-300 cursor-pointer"
+              >
+                {section.charAt(0).toUpperCase() + section.slice(1)}
+              </a>
+            </Link>
+          </li>
+        ))}
+      </ul>
+
+      {/* Dark Mode Toggle */}
+      <button
+        onClick={() => setDarkMode(!darkMode)}
+        className="bg-gray-700 dark:bg-gray-600 p-2 rounded-full focus:outline-none transition-all duration-300 hover:scale-105 cursor-pointer"
+        aria-label="Toggle Dark Mode"
+      >
+        {darkMode ? <FaSun size={24} className="text-yellow-400" /> : <FaMoon size={24} className="text-blue-300" />}
+      </button>
+    </div>
+  </nav>
+</header>
 
       {/* Content */}
       <main className="pt-20">{children}</main>
