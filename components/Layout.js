@@ -43,7 +43,7 @@ const Layout = ({ children }) => {
     <div className="min-h-screen bg-white dark:bg-gray-900 transition-colors duration-500">
       <header className="fixed top-0 w-full z-50 p-5 bg-gray-800 dark:bg-gray-700 text-white shadow-lg">
         <nav className="flex justify-between items-center">
-          <div className="absolute top-20 left-4 animate-fadeInUp">
+          <div className="text-2xl font-bold hover:scale-105 transition-transform duration-300 cursor-pointer">
     <img
       src="/s10.png"
       alt="Logo"
