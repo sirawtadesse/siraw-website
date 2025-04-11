@@ -95,7 +95,7 @@ export default function Home() {
 >
   <div className="absolute top-20 left-4 animate-fadeInUp">
     <img
-      src="/logo.jpg"
+      src="/s10.png"
       alt="Logo"
       className="w-24 h-24 md:w-32 md:h-32 object-cover rounded-full shadow-xl hover:scale-105 transition-transform duration-300 cursor-pointer"
     />
