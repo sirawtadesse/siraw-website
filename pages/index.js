@@ -90,7 +90,7 @@ export default function Home() {
       {/* Home Section with background image and slide down animation */}
       <section
         id="home"
-        className={`hero h-screen md:h-96 bg-cover bg-center relative animate-slideInDown`}
+        className={`hero h-screen md:h-96 bg-cover dark:bg-gray-700 bg-center relative animate-slideInDown`}
         style={{ backgroundImage: "url('/sis.jpg')" }}
       >
         <div className="absolute top-20 left-4">
@@ -178,7 +178,7 @@ export default function Home() {
       </section>
 
       {/* Education Section */}
-      <section id="education" className={`p-6 md:p-10 bg-gray-100 ${fadeClass}`}>
+      <section id="education" className={`p-6 md:p-10 dark:bg-gray-700 bg-gray-100 ${fadeClass}`}>
         <h2 className="text-3xl text-center mb-6 font-semibold">My Education</h2>
         <div className="flex flex-wrap justify-center gap-6">
           <div className="bg-white dark:bg-gray-800 shadow-md rounded-lg p-5 w-full max-w-sm transform hover:scale-105 transition-transform duration-300 cursor-pointer">
@@ -212,7 +212,7 @@ export default function Home() {
       </section>
 
       {/* Contact Section */}
-      <section id="contact" className={`p-6 md:p-10 bg-gray-100 ${fadeClass}`}>
+      <section id="contact" className={`p-6 md:p-10 dark:bg-gray-700 bg-gray-100 ${fadeClass}`}>
         <h2 className="text-3xl text-center mb-6 font-semibold">Get In Touch</h2>
         <div className="flex flex-col md:flex-row gap-10 justify-center items-start">
           <form className="bg-white dark:bg-gray-800 shadow-md rounded-lg p-6 w-full max-w-lg transform hover:scale-105 transition-transform duration-300 cursor-pointer">
