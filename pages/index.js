@@ -91,7 +91,7 @@ export default function Home() {
       <section
   id="home"
   className="hero h-screen md:h-96 bg-cover dark:bg-gray-700 bg-center relative"
-  style={{ backgroundImage: "url('/sis.jpg')" }}
+  style={{ backgroundImage: "url('/s1.jpeg')" }}
 >
   <div className="absolute top-20 left-4 animate-fadeInUp">
     <img
