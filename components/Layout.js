@@ -1,8 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { 
-  FaSun, FaMoon, FaBars, FaTimes, 
-  FaGithub, FaLinkedin, FaTelegram, FaFacebook 
+  FaSun, FaMoon, FaBars, FaTimes
 } from 'react-icons/fa';
 
 const Layout = ({ children }) => {
