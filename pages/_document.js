@@ -4,15 +4,13 @@ export default function Document() {
   return (
     <Html lang="en">
       <Head>
-        {/* Global SEO Meta Tags */}
-        <meta name="google-site-verification" content="drRq1jqFYtVYv4uHYIO3lBo7rcXebL3f2hCJIxi_0BI" />
-        <meta name="description" content="Portfolio of Siraw Tadesse, a full-stack software developer from Addis Ababa University. Explore projects, experience, and skills." />
-        <meta name="keywords" content="Portfolio, Full-Stack, Developer, Siraw Tadesse, Software, Projects, Addis Ababa University" />
-        <meta property="og:title" content="Siraw Tadesse Portfolio" />
-        <meta property="og:description" content="Discover the projects and expertise of Siraw Tadesse, a passionate full-stack developer." />
-        <meta property="og:url" content="https://siraw-website.vercel.app" />
+        <meta name="description" content="An efficient and user-friendly asset management system." />
+        <meta name="keywords" content="Asset Management, Inventory, Tracking" />
+        <meta property="og:title" content="Asset Management System" />
+        <meta property="og:description" content="An efficient and user-friendly asset management system." />
+        <meta property="og:url" content="https://your-asset-management-domain.com" />
         <meta property="og:type" content="website" />
-        <link rel="canonical" href="https://siraw-website.vercel.app" />
+        <link rel="canonical" href="https://your-asset-management-domain.com" />
       </Head>
       <body className="antialiased">
         <Main />
