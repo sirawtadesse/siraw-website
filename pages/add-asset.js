@@ -24,7 +24,7 @@ export default function AddAsset() {
       });
 
       if (res.ok) {
-        router.push('/'); // Redirect to dashboard on success
+        router.push('/');
       } else {
         const errorData = await res.json();
         alert(`Failed to add asset: ${errorData.error}`);
