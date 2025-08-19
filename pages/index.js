@@ -5,10 +5,8 @@ import Link from 'next/link';
 import { useRouter } from 'next/router';
 
 export async function getServerSideProps() {
-  // Fetch all assets from the database
   const allAssets = await db.select().from(assetsSchema).orderBy(assetsSchema.createdAt);
   
-  // Serialize date objects to strings for the component
   const serializedAssets = allAssets.map(asset => ({
     ...asset,
     createdAt: asset.createdAt.toLocaleDateString(),
@@ -28,7 +26,7 @@ export default function Home({ assets }) {
     if (window.confirm('Are you sure you want to delete this asset?')) {
       try {
         await fetch(`/api/assets/${assetId}`, { method: 'DELETE' });
-        router.reload(); // Refresh the page to show the updated list
+        router.reload();
       } catch (error) {
         console.error('Failed to delete asset:', error);
         alert('Failed to delete asset.');
