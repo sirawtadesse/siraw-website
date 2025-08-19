@@ -9,30 +9,20 @@ export default function AddAsset() {
   const [status, setStatus] = useState('Available');
   const router = useRouter();
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
     if (!name) {
       alert('Asset name is required.');
       return;
     }
-
-    try {
-      const res = await fetch('/api/assets', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ name, description, serialNumber, status }),
-      });
-
-      if (res.ok) {
-        router.push('/');
-      } else {
-        const errorData = await res.json();
-        alert(`Failed to add asset: ${errorData.error}`);
-      }
-    } catch (error) {
-      console.error('Submission error:', error);
-      alert('An error occurred while adding the asset.');
-    }
+    
+    // In a real app, you would send this data to an API.
+    // For this frontend-only version, we'll just log it and redirect.
+    const newAsset = { name, description, serialNumber, status };
+    console.log('New Asset Submitted:', newAsset);
+    alert('Asset added successfully! (Check the console)');
+    
+    router.push('/'); // Redirect to dashboard on success
   };
 
   return (
