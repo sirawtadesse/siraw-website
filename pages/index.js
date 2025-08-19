@@ -1,36 +1,22 @@
+import { useState } from 'react';
 import Layout from '../components/Layout';
-import { db } from '../lib/db';
-import { assets as assetsSchema } from '../db/schema';
 import Link from 'next/link';
-import { useRouter } from 'next/router';
 
-export async function getServerSideProps() {
-  const allAssets = await db.select().from(assetsSchema).orderBy(assetsSchema.createdAt);
-  
-  const serializedAssets = allAssets.map(asset => ({
-    ...asset,
-    createdAt: asset.createdAt.toLocaleDateString(),
-  }));
+// Sample data to use since we removed the database connection
+const sampleAssets = [
+  { id: 1, name: 'Laptop Pro 15"', status: 'In Use', serialNumber: 'C02XF1A9JG5J', createdAt: new Date().toLocaleDateString() },
+  { id: 2, name: 'Office Monitor 27"', status: 'Available', serialNumber: 'SNM789123', createdAt: new Date().toLocaleDateString() },
+  { id: 3, name: 'Mechanical Keyboard', status: 'In Repair', serialNumber: 'KBD456789', createdAt: new Date().toLocaleDateString() },
+  { id: 4, name: 'Company Smartphone', status: 'Retired', serialNumber: 'PHN987654', createdAt: new Date().toLocaleDateString() },
+];
 
-  return {
-    props: {
-      assets: serializedAssets,
-    },
-  };
-}
+export default function Home() {
+  const [assets, setAssets] = useState(sampleAssets);
 
-export default function Home({ assets }) {
-  const router = useRouter();
-
-  const handleDelete = async (assetId) => {
+  const handleDelete = (assetId) => {
     if (window.confirm('Are you sure you want to delete this asset?')) {
-      try {
-        await fetch(`/api/assets/${assetId}`, { method: 'DELETE' });
-        router.reload();
-      } catch (error) {
-        console.error('Failed to delete asset:', error);
-        alert('Failed to delete asset.');
-      }
+      // Filter out the deleted asset from the local state
+      setAssets(assets.filter(asset => asset.id !== assetId));
     }
   };
 
